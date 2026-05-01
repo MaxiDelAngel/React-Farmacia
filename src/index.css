@@ -22,15 +22,6 @@ body {
     min-height: 100vh;
 }
 
-.contenedor {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    background:
-        radial-gradient(circle at top right, rgba(130, 207, 255, 0.28), transparent 20%),
-        linear-gradient(180deg, #f6fafc 0%, #eef3f8 100%);
-}
-
 @media (max-width: 900px) {
     .contenedor {
         grid-template-columns: 1fr;

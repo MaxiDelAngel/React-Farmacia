@@ -1,0 +1,16 @@
+.main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background:
+        radial-gradient(circle at top right, rgba(130, 207, 255, 0.28), transparent 20%),
+        linear-gradient(180deg, #f6fafc 0%, #eef3f8 100%);
+}
+
+.contenedor {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}

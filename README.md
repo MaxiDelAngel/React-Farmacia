@@ -9,6 +9,7 @@ El sistema permite administrar medicamentos, inventario y operaciones básicas m
 ## 🚀 Tecnologías
 
 - React
+- React Router
 - TypeScript
 - Vite
 - Supabase

@@ -9,6 +9,7 @@
 	color: #64748b;
 	cursor: pointer;
 	text-align: left;
+	text-decoration: none;
 	background: transparent;
 	transition: background-color 150ms ease, color 150ms ease;
 }
@@ -43,4 +44,25 @@
 
 .collapsed .label {
 	display: none;
+}
+
+.active {
+	background: #e0f2fe;
+	color: #0369a1;
+	font-weight: 600;
+}
+
+.active:hover {
+	background: #bae6fd;
+	color: #0369a1;
+}
+
+.disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.disabled:hover {
+	background: transparent;
+	color: #64748b;
 }
