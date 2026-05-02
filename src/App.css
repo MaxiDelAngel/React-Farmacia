@@ -14,3 +14,22 @@
     border: 1px solid #e0e0e0;
     border-radius: 8px;
 }
+
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .contenedor {
+        margin: 1rem;
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        margin: 0.5rem;
+        padding: 0.875rem;
+    }
+}

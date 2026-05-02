@@ -13,7 +13,7 @@ type MenuItem = {
 const menuItems: MenuItem[] = [
   {
     id: 'dashboard',
-    label: 'Resumen general',
+    label: 'Dashboard',
     path: '/',
     disabled: false,
     icon: (

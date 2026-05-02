@@ -1,0 +1,20 @@
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-title);
+}
+
+.container {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.header {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+}

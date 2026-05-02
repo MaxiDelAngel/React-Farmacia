@@ -1,6 +1,7 @@
 :root {
     --background-color: #ffffff;
     --text-color: #333;
+    --text-title: #1e293b;
     font-family: 'Lato', sans-serif;
     color: var(--text-color);
 }
@@ -22,8 +23,3 @@ body {
     min-height: 100vh;
 }
 
-@media (max-width: 900px) {
-    .contenedor {
-        grid-template-columns: 1fr;
-    }
-}
