@@ -1,9 +1,9 @@
 import style from './Dashboard.module.css'
-import { Card, InlineAlert } from '../../components'
+import { Card } from '../../components'
 import useData from '../../hooks/useData'
 
 function Dashboard() {
-  const { datos, error } = useData()
+  const { datos } = useData()
 
   const totalMedicamentos = datos.length
   const totalPiezas = datos.reduce((total, item) => total + item.stock, 0)
@@ -19,8 +19,6 @@ function Dashboard() {
         <h1 className={style.title}>Resumen general</h1>
         <p className={style.subtitle}>Vista rapida del estado del inventario.</p>
       </header>
-
-      {error ? <InlineAlert variant="error" message={error} /> : null}
 
       <div className={style.grid}>
         <Card

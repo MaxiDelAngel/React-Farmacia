@@ -6,7 +6,7 @@ import useData from '../../hooks/useData'
 type SortValue = 'name-asc' | 'price-asc' | 'price-desc'
 
 function Inventario() {
-  const { datos, error, insertar, actualizar, eliminar } = useData()
+  const { datos, insertar, actualizar, eliminar } = useData()
 
   const [isFormModalOpen, setIsFormModalOpen] = useState(false)
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false)
@@ -259,8 +259,6 @@ function Inventario() {
         sortValue={sortValue}
         onSortChange={(value) => setSortValue(value as SortValue)}
       />
-
-      {error ? <InlineAlert variant="error" message={error} /> : null}
 
       {lowStockCount > 0 ? (
         <InlineAlert
