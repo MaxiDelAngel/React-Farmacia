@@ -1,0 +1,76 @@
+.overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	padding: 1rem;
+	display: grid;
+	place-items: center;
+	background: rgba(15, 23, 42, 0.45);
+}
+
+.modal {
+	width: min(560px, 100%);
+	max-height: min(85vh, 760px);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	border-radius: 14px;
+	border: 1px solid #e2e8f0;
+	background: #ffffff;
+	box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+	overflow: hidden;
+}
+
+.header {
+	padding: 1rem 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.title {
+	margin: 0;
+	font-size: 1.05rem;
+	color: #0f172a;
+}
+
+.closeButton {
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid #dbe4f0;
+	border-radius: 8px;
+	display: grid;
+	place-items: center;
+	font-size: 1rem;
+	line-height: 1;
+	color: #475569;
+	background: #f8fafc;
+	cursor: pointer;
+}
+
+.closeButton:hover {
+	background: #eff6ff;
+	color: #1d4ed8;
+}
+
+.body {
+	padding: 1rem 1.1rem;
+	overflow: auto;
+}
+
+.footer {
+	padding: 1rem 1.1rem;
+	border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 640px) {
+	.overlay {
+		padding: 0.65rem;
+	}
+
+	.modal {
+		width: 100%;
+		max-height: 90vh;
+	}
+}

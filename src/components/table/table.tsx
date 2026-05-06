@@ -1,4 +1,5 @@
 import style from './table.module.css'
+import InlineAlert from '../inlineAlert/inlineAlert'
 
 export type InventoryItem = {
   id: string
@@ -13,9 +14,10 @@ type TableProps = {
   items: InventoryItem[]
   onEdit?: (item: InventoryItem) => void
   onDelete?: (item: InventoryItem) => void
+  lowStockThreshold?: number
 }
 
-function Table({ items, onEdit, onDelete }: TableProps) {
+function Table({ items, onEdit, onDelete, lowStockThreshold = 5 }: TableProps) {
   return (
     <section className={style.wrapper} aria-label="Tabla de inventario">
       <div className={style.tableContainer}>
@@ -41,7 +43,18 @@ function Table({ items, onEdit, onDelete }: TableProps) {
                   {item.descripcion ?? 'Sin descripcion'}
                 </td>
                 <td data-label="Precio" className={style.numericCell}>${item.precio.toFixed(2)}</td>
-                <td data-label="Stock" className={style.numericCell}>{item.stock}</td>
+                <td data-label="Stock" className={style.numericCell}>
+                  <div className={style.stockCell}>
+                    <span>{item.stock}</span>
+                    {item.stock < lowStockThreshold ? (
+                      <InlineAlert
+                        variant={item.stock <= 0 ? 'error' : 'warning'}
+                        compact
+                        message={item.stock <= 0 ? 'Sin stock' : 'Stock bajo'}
+                      />
+                    ) : null}
+                  </div>
+                </td>
                 <td data-label="Tipo">
                   <span className={style.tipoBadge}>{item.tipo}</span>
                 </td>

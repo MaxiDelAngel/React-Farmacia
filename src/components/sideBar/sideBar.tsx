@@ -60,7 +60,6 @@ const menuItems: MenuItem[] = [
 function SideBar() {
   const [collapsed, setCollapsed] = useState(false)
 
-  // Agregue esto para que se colapse automaticamente en pantallas pequeñas
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 900px)')
     const handler = (e: MediaQueryListEvent) => setCollapsed(e.matches)
