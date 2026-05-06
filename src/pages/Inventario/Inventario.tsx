@@ -271,7 +271,7 @@ function Inventario() {
       <Modal
         isOpen={isFormModalOpen}
         onClose={closeFormModal}
-        title={editingItemId ? 'Editar medicamento' : 'Agregar medicamento'}
+        title={editingItemId ? 'Editar medicamentos' : 'Agregar medicamentos'}
         body={modalBody}
         footer={modalFooter}
       />
